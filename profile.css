@@ -1,0 +1,341 @@
+Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    display: flex;
+    background-color: #15161A;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 60px;
+    background-color: #222020;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+    border-radius: 40px; /* Add rounded corners */
+    position: fixed; /* Fix it to one side */
+    top: 25%; /* Move it to the middle */
+    transform: translateY(-50%); /* Center vertically */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.nav-icon {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.nav-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Main content styling */
+main {
+    flex: 1;
+    padding: 40px;
+}
+
+.text {
+    color: white;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-left: 90px;
+}
+
+.profile-content {
+    max-width: 60%; /* Adjust width to control text area */
+}
+
+.profile-content p {
+    color: #8c8e8f;
+    font-size: 1.3rem;
+}
+
+.profile-image {
+    top: 40px; /* Distance from the top of the viewport */
+    right: 40px; /* Distance from the right of the viewport */
+    width: 250px;
+    height: 280px;
+    border-radius: 30%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Adds smooth scaling */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Slightly increase the image size on hover */
+}
+
+/* Projects section */
+.pro {
+    padding-left: 90px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-left: 70px;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    background: linear-gradient(135deg, #0b2545, #0e476c);
+    border-radius: 15px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    padding: 20px;
+    padding-top: 75px;
+    padding-left: 75px;
+  }
+
+  .footer {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for footer */
+    padding: 10px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Light border on top */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-title {
+    font-weight: bold;
+    font-size: 1em;
+  }
+
+  .footer-text {
+    font-size: 0.9em;
+    opacity: 0.7;
+  }
+  
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Project Buttons Styling */
+.project-buttons-section {
+    padding-left: 90px;
+    margin-top: 20px;
+}
+
+.project-buttons {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+}
+
+.project-button {
+    background-color: #333;
+    border: 2px solid #7a7979;
+    color: #ccc;
+    font-size: 0.9em;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Content Repository Box Styling */
+.content-repository {
+    display: flex;
+    margin-top: 40px;
+    padding-left: 90px;
+}
+
+.content-box {
+    width: 900px;
+    height: 500px;
+    background: linear-gradient(135deg, #0b2545, #0e476c); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.content-box h2 {
+    margin: 0; /* Remove margin from header text */
+}
+
+/* Content Repository Section */
+.content-repository-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #15161A; /* Match the page background */
+}
+
+.content-repository-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.content-repository-image {
+    flex: 1;
+}
+
+.laptop-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.content-repository-text {
+    flex: 1;
+    color: white;
+}
+
+.content-repository-text h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.content-repository-text p {
+    color: #8c8e8f;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.visit-work-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 1em;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.visit-work-button:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+/* Styles for the Group Collab Section */
+.group-collab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1c29;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.group-collab .container {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.group-collab .title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.group-collab .subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+.group-collab .browser-window {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #f1f1f1;
+}
+
+.group-collab .browser-header {
+    background-color: #e1e1e1;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.group-collab .browser-header .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.group-collab .dot.red { background-color: #ff5f57; }
+.group-collab .dot.yellow { background-color: #ffbd2e; }
+.group-collab .dot.green { background-color: #27c93f; }
+
+.group-collab .content-repository {
+    background: linear-gradient(to right, #e1be55, #d486a2);
+    padding: 2rem;
+    color: #8a5a1a;
+    text-align: center;
+}
+
+.group-collab .content-repository h1 {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    color: #8a5a1a;
+}
+
+.group-collab .content-repository p {
+    font-size: 1rem;
+    color: #6b4f2d;
+    margin-bottom: 1.5rem;
+}
+
+
