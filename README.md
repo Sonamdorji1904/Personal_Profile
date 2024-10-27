@@ -1,5 +1,5 @@
 # Personal_Profile
-##  PhaseII: DesktopWebsiteDevelopment
+##  PhaseII: Desktop Website Development
 
  **Objective**: Develop a static website for desktop browsers based on your Phase I design.
  
