@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -21,10 +20,10 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px 0;
-    border-radius: 40px; /* Add rounded corners */
-    position: fixed; /* Fix it to one side */
-    top: 25%; /* Move it to the middle */
-    transform: translateY(-50%); /* Center vertically */
+    border-radius: 40px; 
+    position: fixed; 
+    top: 25%; 
+    transform: translateY(-50%); 
 }
 
 .sidebar ul {
@@ -113,7 +112,14 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
+
+.card:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
 
   .title {
     font-size: 2em;

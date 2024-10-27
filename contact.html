@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-
     <!-- Sidebar Navigation (optional, if you want it on all pages) -->
     <nav class="sidebar">
         <ul>
@@ -17,14 +16,14 @@
             <li><a href="contact.html" class="nav-icon">📞</a></li>
         </ul>
     </nav>
-
+    
     <!-- Main Content -->
     <main class="contact-page">
         <h1>Contact Me</h1>
         <p>If you have any questions or would like to collaborate, feel free to reach out. I’d love to hear from you!</p>
 
         <!-- Contact Form -->
-        <form action="submit_contact.php" method="POST" class="contact-form">
+        <form action="submit_contact.php" method="POST" class="contact-form" id="contactForm">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" required>
 
@@ -34,9 +33,45 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" placeholder="Your message" rows="5" required></textarea>
 
-            <button type="submit">Send Message</button>
+            <button type="submit" id="submitButton">Send Message</button>
         </form>
+        <p id="confirmationMessage" style="display: none; color: green;">Thank you! Your message has been sent.</p>
     </main>
 
+    <script>
+        // Add JavaScript for form validation and interactivity
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Basic validation check
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name && email && message) {
+                // Display confirmation message
+                document.getElementById("confirmationMessage").style.display = "block";
+
+                // Clear the form
+                document.getElementById("contactForm").reset();
+
+                // Hide confirmation message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById("confirmationMessage").style.display = "none";
+                }, 3000);
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        });
+
+        // Add hover effect to the submit button
+        const submitButton = document.getElementById("submitButton");
+        submitButton.addEventListener("mouseover", function() {
+            submitButton.style.backgroundColor = "#4CAF50"; // Change to a green shade
+        });
+        submitButton.addEventListener("mouseout", function() {
+            submitButton.style.backgroundColor = ""; // Reset to original color
+        });
+    </script>
 </body>
 </html>
