@@ -67,12 +67,12 @@ header {
 }
 
 .profile-content {
-    max-width: 60%; /* Adjust width to control text area */
+    max-width: 70%; /* Adjust width to control text area */
 }
 
 .profile-content p {
     color: #8c8e8f;
-    font-size: 1.3rem;
+    font-size: 18px;
 }
 
 .profile-image {
@@ -192,7 +192,7 @@ footer {
 
 .content-box {
     width: 900px;
-    height: 500px;
+    height: 300px;
     background: linear-gradient(135deg, #0b2545, #0e476c); /* Gradient background */
     border-radius: 20px; /* Rounded corners */
     display: flex;
@@ -204,6 +204,21 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
 }
 
+.art-box {
+    width: 900px;
+    height: 300px;
+    background: linear-gradient(135deg, #0b2545, #0e476c); /* Gradient background */
+    border-radius: 20px; /* Rounded corners */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    margin-top: 20px;
+}
+
 .content-box img {
     width: 100%;
 
@@ -211,8 +226,22 @@ footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
+.art-box img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
 /* Content Repository Section */
 .content-repository-section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+    background-color: #15161A; /* Match the page background */
+    margin-bottom: -150px;
+}
+
+.art-section {
     display: flex;
     justify-content: center;
     padding: 40px 0;
@@ -227,6 +256,9 @@ footer {
     width: 100%;
 }
 
+.art-box {
+    
+}
 .content-repository-image {
     flex: 1;
 }
@@ -291,7 +323,6 @@ footer {
 
 .group-collab .title {
     font-size: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 .group-collab .subtitle {
@@ -666,3 +697,78 @@ footer {
 .contact-form button:hover {
     background-color: #555;
 }
+
+
+
+/* Media Query for screens smaller than 768px (smartphones) */
+@media (max-width: 768px) {
+
+    /* Adjust container width and padding */
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Stack the header items vertically */
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Navbar: stack menu items vertically */
+    .navbar {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    /* Adjust font size for the header */
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    /* Cards: make cards take full width on smaller screens */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Footer: Adjust padding for smaller screens */
+    .footer {
+        padding: 10px;
+    }
+
+    /* Images should be responsive */
+    .card img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Optionally, you can also reduce font sizes on smaller screens for readability */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for larger screens (optional, e.g., desktops) */
+@media (min-width: 769px) {
+    /* If you want to make adjustments for larger screens */
+    .header {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: calc(33.33% - 20px);
+    }
+}
+
